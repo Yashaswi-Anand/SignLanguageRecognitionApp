@@ -39,6 +39,7 @@ public class CombineLettersActivity extends Activity implements CameraBridgeView
     private Button clear_button;
     private Button add_button;
     private TextView change_text;
+    private Button text_to_speech;
 
 
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
@@ -83,13 +84,15 @@ public class CombineLettersActivity extends Activity implements CameraBridgeView
         clear_button = findViewById(R.id.clear_button);
         add_button = findViewById(R.id.add_button);
         change_text = findViewById(R.id.change_text);
+        text_to_speech = findViewById(R.id.textToSpeech_button);
 
 
         try {
             // pass sign language model through object detection class
             // and pass input size 96
             // pass clear_button, add_button, change_text
-            signLanguageClass = new signLanguageClass(clear_button, add_button, change_text, getAssets(), "hand_model.tflite", "custom_label.txt", 300, "model.tflite", 96);
+            // add text to speech button
+            signLanguageClass = new signLanguageClass(CombineLettersActivity.this,clear_button, add_button, change_text,text_to_speech, getAssets(), "hand_model.tflite", "custom_label.txt", 300, "model.tflite", 96);
             Log.d(TAG, "Model is successfully loaded");
         } catch (IOException e) {
             Log.d(TAG, "Getting some error");

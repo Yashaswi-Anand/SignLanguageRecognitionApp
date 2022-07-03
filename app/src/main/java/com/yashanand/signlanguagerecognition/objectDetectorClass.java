@@ -205,7 +205,7 @@ public class objectDetectorClass {
 
                 // Resize bitmap1 to classification input size =96
                 Bitmap scaledBitmap1 = Bitmap.createScaledBitmap(bitmap1, Classification_input_size, Classification_input_size, false);
-                // convert scalebitmap to byte buffer
+                // convert scaleBitmap to byte buffer
                 ByteBuffer byteBuffer1 = convertBitmapToByteBuffer1(scaledBitmap1);
                 // create an array output of interpreter
                 float[][] output_class_value = new float[1][1];
@@ -225,7 +225,7 @@ public class objectDetectorClass {
 
 
                 // draw rectangle in Original frame //  starting point    // ending point of box  // color of box       thickness
-                Imgproc.rectangle(rotated_mat_image, new Point(x1, y1), new Point(x2, y2), new Scalar(0, 255, 0, 255), 2);
+                Imgproc.rectangle(rotated_mat_image, new Point(x1, y1), new Point(x2, y2), new Scalar(0, 255, 0, 255), 8);
                 //
             }
 

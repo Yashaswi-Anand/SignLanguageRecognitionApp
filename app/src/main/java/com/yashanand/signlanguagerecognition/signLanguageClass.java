@@ -1,8 +1,10 @@
 package com.yashanand.signlanguagerecognition;
 
+import android.content.Context;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +19,7 @@ import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
 import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.gpu.GpuDelegate;
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -28,6 +31,7 @@ import java.nio.ByteOrder;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -51,9 +55,11 @@ public class signLanguageClass {
     private int Classification_input_size = 96;
     private String finalText = "";
     private String currentText = "";
+    private TextToSpeech textToSpeech;
 
     // add model and input size in object detection class
-    signLanguageClass(Button clearButton, Button addButton, TextView changeText, AssetManager assetManager, String modelPath, String labelPath, int inputSize, String classification_model, int classification_input_size) throws IOException {
+    // add context and a button for text_to_speech
+    signLanguageClass(Context context, Button clearButton, Button addButton, TextView changeText,Button text_To_Speech_btn, AssetManager assetManager, String modelPath, String labelPath, int inputSize, String classification_model, int classification_input_size) throws IOException {
         INPUT_SIZE = inputSize;
         // use to define gpu or cpu // no. of threads
         Interpreter.Options options = new Interpreter.Options();
@@ -88,6 +94,24 @@ public class signLanguageClass {
             }
         });
 
+        // Initialize TextToSpeech
+        textToSpeech = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if(i != TextToSpeech.ERROR){
+                    textToSpeech.setLanguage(Locale.ENGLISH);
+                }
+            }
+        });
+
+        // add set on click listener on text_to_speech_btn
+        text_To_Speech_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textToSpeech.speak(finalText,TextToSpeech.QUEUE_FLUSH,null);
+
+            }
+        });
     }
 
     private List<String> loadLabelList(AssetManager assetManager, String labelPath) throws IOException {
@@ -293,7 +317,7 @@ public class signLanguageClass {
         } else if (sign_v >= 12.5 & sign_v < 13.5) {
             val = "N";
         } else if (sign_v >= 13.5 & sign_v < 14.5) {
-            val = "0";
+            val = "O";
         } else if (sign_v >= 14.5 & sign_v < 15.5) {
             val = "P";
         } else if (sign_v >= 15.5 & sign_v < 16.5) {
