@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
@@ -262,9 +263,10 @@ public class signLanguageClass {
                 // now create get_alphabets function
                 String sign_val = get_alphabets(output_class_value[0][0]);
                 currentText = sign_val;
+                textToSpeech.speak(sign_val,TextToSpeech.SUCCESS,null);
                 // use put text to add class name in image
                 //                input/output         text              starting point           font size                  text color
-                Imgproc.putText(rotated_mat_image, " " + sign_val, new Point(x1 + 10, y1 + 40), 2, 1.5, new Scalar(255, 255, 255, 255), 2);
+                Imgproc.putText(rotated_mat_image, "Letter " + sign_val, new Point(x1 + 10, y1 + 40), 2, 1.5, new Scalar(255, 255, 255, 255), 2);
 
 
                 // draw rectangle in Original frame //  starting point    // ending point of box  // color of box       thickness

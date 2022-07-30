@@ -28,14 +28,6 @@
             android:layout_marginBottom="10dp"
             android:src="@drawable/signlang_guide" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Mentor: Abha Kumari"
-            android:textColor="@color/black"
-            android:textSize="25dp" />
-
 
     </LinearLayout>
 

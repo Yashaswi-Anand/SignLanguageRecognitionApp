@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        camera_button = findViewById(R.id.camera_button);
-        camera_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CameraActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
-            }
-        });
+//        camera_button = findViewById(R.id.camera_button);
+//        camera_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, CameraActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
+//            }
+//        });
 
         form_Word = findViewById(R.id.combine_letter_button);
         form_Word.setOnClickListener(new View.OnClickListener() {

@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Sign Language</string>
-    <string name="app_description">In this sign language recognition project, we create a sign detector, which detects alphabets from A to z that can very easily be extended to cover a vast multitude of other signs and hand gestures including the alphabets.</string>
+    <string name="app_description">* Sign language recognition project.\n* We create a sign recognizer app which detects alphabets from A to Z that can very easily be extended to cover a vast multitude of other signs and hand gestures including the alphabets.\n* American Sign Language letters dataset used here.</string>
 </resources>

@@ -22,51 +22,153 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="15dp"
         android:padding="2dp"
-        android:text="Sign language recognition "
+        android:text="Sign language \n  recognition "
         android:textAlignment="textStart"
         android:textAllCaps="true"
         android:textColor="@color/purple_700"
-        android:textSize="20dp"
-        android:textStyle="bold|italic" />
+        android:textSize="35dp"
+        android:fontFamily="serif" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="15dp"
-        android:fontFamily="monospace"
-        android:padding="20dp"
-        android:text="@string/app_description"
-        android:textAlignment="textStart"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:textStyle="bold|italic" />
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/camera_button"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/white"
-        android:text="Real-time recogination"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/letter_b" />
 
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img1"
+            android:padding="2dp"
+            android:text="B "
+            android:layout_marginLeft="70dp"
+            android:textAllCaps="true"
+            android:textColor="#F81707"
+            android:textSize="100dp"
+            android:fontFamily="cursive"
+           />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/letter_o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img2"
+            android:padding="2dp"
+            android:text="O "
+            android:layout_marginLeft="70dp"
+            android:textAllCaps="true"
+            android:textColor="#F81707"
+            android:textSize="100dp"
+            android:fontFamily="cursive" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/letter_y" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img3"
+            android:fontFamily="cursive"
+            android:padding="2dp"
+            android:text="Y "
+            android:textAllCaps="true"
+            android:textColor="#F81707"
+            android:textSize="100dp" />
+    </RelativeLayout>
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginRight="15dp"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:padding="20dp"-->
+<!--        android:text="@string/app_description"-->
+<!--        android:textAlignment="textStart"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="15dp"-->
+<!--        android:textStyle="bold|italic" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/camera_button"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:text="Real-time recognition"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/brown"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:textStyle="bold"-->
+
+<!--        />-->
 
     <Button
         android:id="@+id/combine_letter_button"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/white"
-        android:text="  Form Word   "
+        android:backgroundTint="@color/brown"
+        android:text="Ready To Recognise"
         android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_button"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="serif" />
 
 </LinearLayout>

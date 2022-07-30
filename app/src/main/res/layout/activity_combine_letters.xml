@@ -7,9 +7,10 @@
 
     <ImageView
         android:id="@+id/backArrow"
-        android:layout_width="75dp"
-        android:layout_height="45dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
         android:onClick="backOnActivity"
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -18,14 +19,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="22dp"
         android:layout_marginBottom="30dp"
-        android:text="Combine Letters"
+        android:text="  Sign Recognition"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/brown"
-        android:textSize="30dp"
-        android:textStyle="bold|italic"
+        android:textColor="@color/purple_700"
+        android:textSize="24dp"
+        android:fontFamily="serif"
         app:layout_constraintLeft_toRightOf="@+id/backArrow"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,10 +59,10 @@
                 android:id="@+id/change_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="create a word "
+                android:hint="Your word here... "
                 android:text=""
                 android:textColor="@color/brown"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/brown"
                 android:textSize="25dp"
                 android:textStyle="bold|italic" />
 
@@ -69,7 +70,7 @@
 
         <LinearLayout
             android:id="@+id/bottom_linear_layout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:gravity="center"
             android:padding="10dp"
@@ -79,15 +80,21 @@
                 android:id="@+id/add_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginRight="30dp"
+                android:fontFamily="serif"
+                android:textColor="@color/purple_700"
+                android:background="@drawable/background_button"
                 android:text="ADD" />
 
             <Button
                 android:id="@+id/textToSpeech_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_marginRight="30dp"
+                android:textColor="@color/purple_700"
+                android:fontFamily="serif"
+                android:background="@drawable/background_button"
                 android:text="Speech" />
 
             <Button
@@ -95,6 +102,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
+                android:textColor="@color/purple_700"
+                android:fontFamily="serif"
+                android:background="@drawable/background_button"
                 android:text="ClEAR" />
 
         </LinearLayout>
