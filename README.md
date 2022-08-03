@@ -23,10 +23,10 @@ can very easily be extended to cover a vast multitude of other signs and hand ge
 <h3> ScreenShots: </h3>
 
 <div>
-    <img src="./screenshots/splash_screen.jpg" height="500" width="320" style="display:inline-block"/>
-    <img src="./screenshots/main_screen.jpg"  style="display:inline-block"/>
-    <img src="./screenshots/menu_list.jpg"  style="display:inline-block"/>
-    <img src="./screenshots/b.jpg"  style="display:inline-block"/>
-    <img src="./screenshots/o.jpg"  style="display:inline-block"/>
-    <img src="./screenshots/y.jpg"  style="display:inline-block"/>
+    <img src="./screenshots/splash_screen.jpg" height="550" width="320" style="display:inline-block"/>
+    <img src="./screenshots/main_screen.jpg" height="550" width="320" style="display:inline-block"/>
+    <img src="./screenshots/menu_list.jpg" height="550" width="320" style="display:inline-block"/>
+    <img src="./screenshots/b.jpg" height="550" width="320" style="display:inline-block"/>
+    <img src="./screenshots/o.jpg" height="550" width="320" style="display:inline-block"/>
+    <img src="./screenshots/y.jpg" height="550" width="320" style="display:inline-block"/>
 </div>
